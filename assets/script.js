@@ -3,7 +3,7 @@ let yourName = "Jane Doe" // HINT: Replace this with your own name!
 
 //my name
 
-yourName = 'Adrian Reyes'
+yourName = 'Adrian Reyes';
 
 // We'll use these variables to track the counts of each cookie type
 let gb = 0      // Ginger bread
@@ -54,14 +54,14 @@ document.getElementById('add-cc').addEventListener('click', function(){
     let ccVoteAdd = parseInt(cc.textContent)
     ccVoteAdd += 1;
     cc.textContent = ccVoteAdd;
-    total.textContent = ccVoteAdd
+    total.textContent = ccVoteAdd;
 })
 
 document.getElementById('minus-cc').addEventListener('click', function(){
     let ccVoteMinus = parseInt(cc.textContent);
     ccVoteMinus -= 1;
     cc.textContent = ccVoteMinus;
-    total.textContent = ccVoteMinus
+    total.textContent = ccVoteMinus;
 })
 
 // sugar sprinkle
@@ -71,13 +71,13 @@ sugar =  document.querySelector('#qty-sugar');
 document.getElementById('add-sugar').addEventListener('click', function(){
     let ssVoteAdd = parseInt(sugar.textContent)
     ssVoteAdd += 1;
-    sugar.textContent = ssVoteAdd
-    total.textContent = ssVoteAdd
+    sugar.textContent = ssVoteAdd;
+    total.textContent = ssVoteAdd;
 })
 
 document.getElementById('minus-sugar').addEventListener('click', function(){
     let ssVoteMinus = parseInt(sugar.textContent);
     ssVoteMinus -= 1;
     sugar.textContent = ssVoteMinus;
-    total.textContent = ssVoteMinus
+    total.textContent = ssVoteMinus;
 })
