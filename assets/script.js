@@ -9,6 +9,7 @@ yourName = 'Adrian Reyes';
 let gb = 0      // Ginger bread
 let cc = 0      // Chocolate Chip
 let sugar = 0   // Sugar Sprinkle
+let total = 0
 
 // Code to update name display 
 document.getElementById('credit').textContent = `Created by ${yourName}`
@@ -26,58 +27,52 @@ document.getElementById('add-gb').addEventListener('click', function(){
 
 // total
 
-let total =  document.querySelector('#qty-total');
+let totalCell =  document.querySelector('#qty-total');
 
 //Ginger bread
 
-gb =  document.querySelector('#qty-gb');
+gbCell =  document.querySelector('#qty-gb');
 
 document.getElementById('add-gb').addEventListener('click', function(){
-    let gbVoteAdd = parseInt(gb.textContent);
-    gbVoteAdd += 1;
-    gb.textContent = gbVoteAdd;
-    total.textContent = gbVoteAdd;
+    gb += 1;
+    gbCell.textContent = gb;
+    totalCell.textContent = gb + cc + sugar;
 })
 
 document.getElementById('minus-gb').addEventListener('click', function(){
-    let gbVoteMinus = parseInt(gb.textContent);
-    gbVoteMinus -= 1;
-    gb.textContent = gbVoteMinus;
-    total.textContent = gbVoteMinus;
+    gb -= 1;
+    gbCell.textContent = gb;
+    totalCell.textContent = gb + cc + sugar;
 })
 
 // chocolate chip
 
-cc =  document.querySelector('#qty-cc');
+ccCell =  document.querySelector('#qty-cc');
 
 document.getElementById('add-cc').addEventListener('click', function(){
-    let ccVoteAdd = parseInt(cc.textContent)
-    ccVoteAdd += 1;
-    cc.textContent = ccVoteAdd;
-    total.textContent = ccVoteAdd;
+    cc += 1;
+    ccCell.textContent = cc;
+    totalCell.textContent = gb + cc + sugar;
 })
 
 document.getElementById('minus-cc').addEventListener('click', function(){
-    let ccVoteMinus = parseInt(cc.textContent);
-    ccVoteMinus -= 1;
-    cc.textContent = ccVoteMinus;
-    total.textContent = ccVoteMinus;
+    cc -= 1;
+    ccCell.textContent = cc;
+    totalCell.textContent = gb + cc + sugar;
 })
 
 // sugar sprinkle
 
-sugar =  document.querySelector('#qty-sugar');
+sugarCell =  document.querySelector('#qty-sugar');
 
 document.getElementById('add-sugar').addEventListener('click', function(){
-    let ssVoteAdd = parseInt(sugar.textContent)
-    ssVoteAdd += 1;
-    sugar.textContent = ssVoteAdd;
-    total.textContent = ssVoteAdd;
+    sugar += 1;
+    sugarCell.textContent = sugar;
+    totalCell.textContent = gb + cc + sugar;
 })
 
 document.getElementById('minus-sugar').addEventListener('click', function(){
-    let ssVoteMinus = parseInt(sugar.textContent);
-    ssVoteMinus -= 1;
-    sugar.textContent = ssVoteMinus;
-    total.textContent = ssVoteMinus;
+    sugar -= 1;
+    sugarCell.textContent = sugar;
+    totalCell.textContent = gb + cc + sugar;
 })
